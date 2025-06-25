@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "properties"
+    label: "Properties"
+    folder: "src/properties"
+    create: true
+    fields:
+      - { name: path, label: Path, widget: string }
+      - { name: title, label: Title, widget: string }
+      - { name: price, label: Price, widget: string }
+      - { name: address, label: Address, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: features, label: Features, widget: list }
+      - { name: images, label: Images, widget: list, field: { name: image, label: Image, widget: image } }
+
+  - name: "general"
+    label: "General Content"
+    files:
+      - file: "src/data/general.yml"
+        label: "Site Content"
+        fields:
+          - { name: hero_title, label: Hero Title, widget: string }
+          - { name: hero_subtitle, label: Hero Subtitle, widget: string }
+          - { name: about_text, label: About Us Text, widget: text }
+          - { name: footer_text, label: Footer Text, widget: text }
+          - { name: partner_logos, label: Partner Logos, widget: list, field: { name: logo, label: Logo, widget: image } }

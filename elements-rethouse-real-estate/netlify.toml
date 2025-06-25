@@ -1,0 +1,13 @@
+[build]
+  command = "cd HTML-MASTER && npm install && npm run build"
+  publish = "PROPERTY"
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/homepage-v1.html"
+  status = 200

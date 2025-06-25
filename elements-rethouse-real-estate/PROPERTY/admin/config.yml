@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "properties"
+    label: "Properties"
+    folder: "_data/properties"
+    create: true
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "price", label: "Price", widget: "string" }
+      - { name: "address", label: "Address", widget: "string" }
+      - { name: "beds", label: "Beds", widget: "number" }
+      - { name: "baths", label: "Baths", widget: "number" }
+      - { name: "area", label: "Area (sq ft)", widget: "number" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "image", label: "Featured Image", widget: "image" }
+      
+  - name: "agents"
+    label: "Agents"
+    folder: "_data/agents"
+    create: true
+    fields:
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "position", label: "Position", widget: "string" }
+      - { name: "phone", label: "Phone", widget: "string" }
+      - { name: "email", label: "Email", widget: "string" }
+      - { name: "bio", label: "Bio", widget: "text" }
+      - { name: "photo", label: "Photo", widget: "image" }
