@@ -1,4 +1,5 @@
 [build]
+  base = "elements-rethouse-real-estate"
   command = "cd HTML-MASTER && npm install && npm run build"
   publish = "PROPERTY"
 
