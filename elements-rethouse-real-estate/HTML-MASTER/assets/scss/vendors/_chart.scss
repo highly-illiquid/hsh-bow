@@ -1,1 +1,2 @@
-@import "~chart.js/dist/chart.min";
+// Removed @import "~chart.js/dist/chart.min"; as it causes build issues.
+// Chart.js styling is typically handled via JavaScript or custom CSS.
