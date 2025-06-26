@@ -17,7 +17,6 @@
 @import "./vendors/googlefonts";
 @import "./vendors/bootstrap";
 @import "./vendors/animate";
-@import "./vendors/owl.carousel";
 @import "./vendors/aos";
 
 @import "./vendors/nice-select";
@@ -85,3 +84,8 @@
 // Themes
 // - for different aspects
 @import "./themes/default";
+
+// Override for owl.carousel video play icon path
+.owl-carousel .owl-video-play-icon {
+  background: url("../images/owl.video.play.png") no-repeat;
+}

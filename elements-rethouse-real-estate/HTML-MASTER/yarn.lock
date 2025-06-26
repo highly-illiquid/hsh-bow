@@ -5208,7 +5208,7 @@ jquery@^2.2.3:
   resolved "https://registry.npmjs.org/jquery/-/jquery-2.2.4.tgz"
   integrity sha512-lBHj60ezci2u1v2FqnZIraShGgEXq35qCzMv4lITyHGppTnA13rwR0MgwyNJh9TnDs3aXUvd1xjAotfraMHX/Q==
 
-jquery@^3.4.0, jquery@>=1.5.0, jquery@>=1.7, jquery@>=1.7.0, jquery@>=1.8, jquery@>=1.8.0, jquery@>=1.8.3, "jquery@1.9.1 - 3":
+jquery@^3.4.0, jquery@>=1.5.0, jquery@>=1.7, jquery@>=1.7.0, jquery@>=1.8, jquery@>=1.8.0, "jquery@1.9.1 - 3":
   version "3.7.1"
   resolved "https://registry.npmjs.org/jquery/-/jquery-3.7.1.tgz"
   integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
@@ -6237,13 +6237,6 @@ outlayer@^2.1.0:
     ev-emitter "^1.0.0"
     fizzy-ui-utils "^2.0.0"
     get-size "^2.0.2"
-
-owl.carousel@^2.3.4:
-  version "2.3.4"
-  resolved "https://registry.npmjs.org/owl.carousel/-/owl.carousel-2.3.4.tgz"
-  integrity sha512-JaDss9+feAvEW8KZppPSpllfposEzQiW+Ytt/Xm5t/3CTJ7YVmkh6RkWixoA2yXk2boIwedYxOvrrppIGzru9A==
-  dependencies:
-    jquery ">=1.8.3"
 
 own-keys@^1.0.1:
   version "1.0.1"
