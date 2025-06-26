@@ -1,1 +1,152 @@
-@import "~jquery-nice-select/scss/nice-select";
+// Default variables
+$font-size: 14px !default;
+$line-height: 1.5 !default;
+$placeholder-color: #999 !default;
+$border-radius: 4px !default;
+$border-color: #dee2e6 !default;
+$background-color: #fff !default;
+$arrow-color: #999 !default;
+$text-color: #444 !default;
+$focus-color: #007bff !default;
+$disabled-color: #ededed !default;
+$padding-vertical: 10px !default;
+$padding-horizontal: 12px !default;
+$input-height: calc(1.5em + 1.5rem + 2px) !default;
+
+.nice-select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: $background-color;
+  border-radius: $border-radius;
+  border: solid 1px $border-color;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: $font-size;
+  font-weight: normal;
+  height: 42px;
+  line-height: calc(#{$input-height} - 2px);
+  outline: none;
+  padding-left: $padding-horizontal;
+  padding-right: $padding-horizontal + 18px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  &.wide {
+    width: 100%;
+  }
+  &.right {
+    float: right;
+  }
+  &.small {
+    font-size: 12px;
+    height: 36px;
+    line-height: 34px;
+    padding-right: $padding-horizontal + 14px;
+  }
+  &.disabled {
+    border-color: lighten($border-color, 5%);
+    color: $placeholder-color;
+    pointer-events: none;
+    &::after {
+      border-color: lighten($arrow-color, 20%);
+    }
+  }
+
+  // Arrow
+  &::after {
+    border-bottom: 2px solid $arrow-color;
+    border-right: 2px solid $arrow-color;
+    content: '';
+    display: block;
+    height: 5px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform-origin: 66% 66%;
+    transform: rotate(45deg);
+    transition: all 0.15s ease-in-out;
+    width: 5px;
+  }
+
+  &.open {
+    @extend :focus;
+    &::after {
+      transform: rotate(-135deg);
+    }
+    .list {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1) translateY(0);
+    }
+  }
+  &.disabled {
+    background-color: $disabled-color;
+    color: darken($disabled-color, 25%);
+  }
+
+  // Modifiers
+  &.right {
+    float: right;
+  }
+
+  // List and options
+  .list {
+    background-color: $background-color;
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 1px rgba($border-color, .5);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform-origin: 50% 0;
+    transform: scale(.75) translateY(-21px);
+    transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+    z-index: 9;
+    &:hover {
+      .option:not(:hover) {
+        background-color: transparent !important;
+      }
+    }
+  }
+  .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    outline: none;
+    padding-left: $padding-horizontal;
+    padding-right: $padding-horizontal + 11px;
+    text-align: left;
+    transition: all 0.2s;
+    &:hover, &.focus, &.selected.focus {
+      background-color: lighten($border-color, 7%);
+    }
+    &.selected {
+      font-weight: bold;
+    }
+    &.disabled {
+      background-color: transparent;
+      color: $placeholder-color;
+      cursor: default;
+    }
+  }
+}
+
+// Use box-sizing so that `width` is not affected by `padding` or `border`
+* {
+  box-sizing: border-box;
+}
